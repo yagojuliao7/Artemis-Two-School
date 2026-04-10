@@ -33,6 +33,16 @@ public class aluno {
     public aluno() {
     }
 
+    
+
+    public aluno(integer id, String nome, LocalDate dataNascimento, String email) {
+        this.id = id;
+        this.nome = nome;
+        this.dataNascimento = dataNascimento;
+        this.email = email;
+    }
+
+
 
     public integer getId() {
         return id;
