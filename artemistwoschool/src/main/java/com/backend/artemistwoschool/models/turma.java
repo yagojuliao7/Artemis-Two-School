@@ -1,4 +1,4 @@
-package main.java.com.backend.artemistwoschool.models;
+package com.backend.artemistwoschool.models;
 
 import java.util.List;
 
@@ -13,9 +13,9 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "turma")
-public class turma {
+public class Turma {
    
-    @id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
     private Integer id;
@@ -24,15 +24,15 @@ public class turma {
     private String nome;
 
     @OneToMany
-    @JoionColumn(name = "id_turma")
-    private List<alunos> alunos;
+    @JoinColumn(name = "id_turma")
+    private List<Aluno> alunos;
 
-    public turma() {
+    public Turma() {
     }
 
     
 
-    public turma(Integer id, String nome, List<main.java.com.backend.artemistwoschool.models.alunos> alunos) {
+    public Turma(Integer id, String nome, List<Aluno> alunos) {
         this.id = id;
         this.nome = nome;
         this.alunos = alunos;
@@ -63,8 +63,4 @@ public class turma {
     public void setAlunos(List alunos) {
         this.alunos = alunos;
     }
-
-    
-    
-
 }
