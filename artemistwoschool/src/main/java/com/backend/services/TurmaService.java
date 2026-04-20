@@ -39,7 +39,7 @@ public class TurmaService{
             turmaRecuperada.setId(id);
             if (turma.getNome() != null) {
                 turmaRecuperada.setNome(turma.getNome());
-            }   
+            }    
             return turmaRepository.save(turmaRecuperada);
         }
         return null;
